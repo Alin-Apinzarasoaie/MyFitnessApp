@@ -3,6 +3,7 @@ package com.university.myfitnessapp;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -10,6 +11,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @EntityScan(basePackages = "com.university.myfitnessapp.repository.models")
 @EnableJpaRepositories(basePackages = "com.university.myfitnessapp.repository")
+@EnableJpaAuditing
 public class MyfitnessappApplication {
 
     public static void main(String[] args) {
